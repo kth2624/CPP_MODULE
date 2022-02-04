@@ -8,11 +8,11 @@ int main(void)
 
 	stringPTR = &str;
 	std::cout << "ptr, ref 변환시작" << std::endl;
-	std::cout << &str << std::endl;
-	std::cout << stringPTR << std::endl;
-	std::cout << &stringREF << std::endl;
+	std::cout <<  "str = " << &str << std::endl;
+	std::cout <<  "ptr = " << stringPTR << std::endl;
+	std::cout <<  "ref = " << &stringREF << std::endl << std::endl;
 	std::cout << "정상 문자열 출력" << std::endl;
-	std::cout << *stringPTR << std::endl;
-	std::cout << stringREF << std::endl;
+	std::cout <<  "str_ptr = " << *stringPTR << std::endl;
+	std::cout <<  "str_ref = " << stringREF << std::endl;
 	return 0;
 }
