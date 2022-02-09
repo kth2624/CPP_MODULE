@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Karen.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: tkim <tkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 01:21:58 by tkim              #+#    #+#             */
-/*   Updated: 2022/02/08 01:22:28 by tkim             ###   ########.fr       */
+/*   Updated: 2022/02/08 20:09:34 by tkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int Karen::get_value_num(std::string level)
 
 	for(int i = 0; i < 4; i++)
 	{
-		
+
 		if(str[i] == level)
 		{
 			return i;
@@ -40,7 +40,7 @@ int Karen::get_value_num(std::string level)
 	}
 	return -1;
 }
-void Karen::complain(std::string level, std::string value)
+void Karen::complain(std::string value)
 {
 	int n;
 	std::string str[4] = {
@@ -52,19 +52,32 @@ void Karen::complain(std::string level, std::string value)
 	//멤버함수 포인터 문법
 	//Return_Type (Class_Name::* pointer_name)(Argument_List)
 	//void (Karen::*f)();
-	void(Karen::*fn[4])() ={ 
+	void(Karen::*fn[4])() ={
 		&Karen::debug,
 		&Karen::info,
 		&Karen::warning,
 		&Karen::error
 	};
-	
+
 	n = get_value_num(value);
 
-	for(int i = 0; i < 4; i++)
+	// for(int i = 0; i < 4; i++)
+	// {
+	// 	if(str[i] == level && i >= n)
+	// 		(this->*fn[i])();
+	// }
+	// std::cout << std::endl;
+
+	switch(n)
 	{
-		if(str[i] == level && i >= n)
-			(this->*fn[i])();
+		case 0:
+			(this->*fn[0])();
+		case 1:
+			(this->*fn[1])();
+		case 2:
+			(this->*fn[2])();
+		case 3:
+			(this->*fn[3])();
 	}
 }
 

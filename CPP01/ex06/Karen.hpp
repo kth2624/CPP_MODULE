@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: tkim <tkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 01:22:00 by tkim              #+#    #+#             */
-/*   Updated: 2022/02/08 01:22:29 by tkim             ###   ########.fr       */
+/*   Updated: 2022/02/08 20:09:42 by tkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ class Karen
 		Karen();
 		~Karen();
 		int get_value_num(std::string value);
-		void complain(std::string level, std::string value);
+		void complain(std::string value);
 };
 
 #endif

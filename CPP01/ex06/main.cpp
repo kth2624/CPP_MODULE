@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: tkim <tkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 01:22:01 by tkim              #+#    #+#             */
-/*   Updated: 2022/02/08 01:22:30 by tkim             ###   ########.fr       */
+/*   Updated: 2022/02/08 20:10:33 by tkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main(int argc, char *argv[])
 {
 	if(argc != 2)
-	{	
+	{
 		std::cout << "arg error ^^ retry! " << std::endl;
 		return 0;
 	}
@@ -27,9 +27,6 @@ int main(int argc, char *argv[])
 	}
 	Karen karen;
 
-	karen.complain("debug",value);
-	karen.complain("info",value);
-	karen.complain("warning",value);
-	karen.complain("error",value);
+	karen.complain(value);
 	return 0;
 }
