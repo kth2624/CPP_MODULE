@@ -6,13 +6,13 @@
 #    By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/07 23:51:44 by tkim              #+#    #+#              #
-#    Updated: 2022/02/07 23:51:45 by tkim             ###   ########.fr        #
+#    Updated: 2022/02/09 01:38:40 by tkim             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fixed
 
-CXX = clang++
+CXX = c++
 
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 

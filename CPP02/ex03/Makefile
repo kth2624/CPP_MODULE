@@ -6,13 +6,13 @@
 #    By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/07 23:52:04 by tkim              #+#    #+#              #
-#    Updated: 2022/02/08 01:18:15 by tkim             ###   ########.fr        #
+#    Updated: 2022/02/09 01:38:24 by tkim             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = bsp
 
-CXX = clang++
+CXX = c++
 
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 

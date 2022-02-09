@@ -6,7 +6,7 @@
 /*   By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/08 01:17:57 by tkim              #+#    #+#             */
-/*   Updated: 2022/02/08 01:17:58 by tkim             ###   ########.fr       */
+/*   Updated: 2022/02/09 01:38:28 by tkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,14 +37,15 @@ bool bsp( Point const a, Point const b, Point const c, Point const point)
 {
 	Point d1(b-a);
 	Point d2(c-a);
-
 	Point p(point-a);
+	Fixed zero(0);
+	Fixed one(1);
 
 	Fixed	t1((p.getX() * d2.getY() -  d2.getX() * p.getY()) / (d1.getX() * d2.getY() - d2.getX() * d1.getY()));
 	
 	Fixed	t2((p.getX() * d1.getY() -  d1.getX() * p.getY()) / (d2.getX() * d1.getY() - d1.getX() * d2.getY()));
 
-	if ((Fixed(0.0f) < t1 + t2 && t1 + t2 < Fixed(1.0f)) && (Fixed(0.0f) < t2 && t2 < Fixed(1.0f)) && (Fixed(0.0f) < t1 && t1 < Fixed(1.0f)))
+	if ((zero < t1 + t2 && t1 + t2 < one) && (zero < t2 && t2 < one) && (zero < t1 && t1 < one))
 		return true;
 	return false;
 
