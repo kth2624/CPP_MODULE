@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: tkim <tkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 23:51:34 by tkim              #+#    #+#             */
-/*   Updated: 2022/02/07 23:51:36 by tkim             ###   ########.fr       */
+/*   Updated: 2022/02/09 19:23:13 by tkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ Fixed::~Fixed()
 Fixed::Fixed(const Fixed& fixed)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	this->point_value = fixed.point_value;
-	//*this = fixed;
+	// this->point_value = fixed.point_value;
+	*this = fixed;
 }
 
 Fixed& Fixed::operator=(const Fixed &other)
@@ -37,11 +37,11 @@ Fixed& Fixed::operator=(const Fixed &other)
 	std::cout << "Assignation operator called" << std::endl;
 	if (this == &other) //자기 자신을 대입하는 경우
 		return *this;
-	this->point_value = other.point_value;
+	this->point_value = other.getRawBits();
 	return *this;
 }
 
-int Fixed::getRawBits(void)
+int Fixed::getRawBits(void)const
 {
 	std::cout << "getRawBits member function called" << std::endl;
 	return this->point_value;

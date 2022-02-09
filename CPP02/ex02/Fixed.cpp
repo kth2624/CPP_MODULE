@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: tkim <tkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 23:48:33 by kth2624           #+#    #+#             */
-/*   Updated: 2022/02/07 23:50:20 by tkim             ###   ########.fr       */
+/*   Updated: 2022/02/09 19:29:26 by tkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ Fixed& Fixed::operator=(const Fixed &other)
 {
 	if (this == &other) //자기 자신을 대입하는 경우
 		return *this;
-	this->point_value = other.point_value;
+	this->point_value = other.getRawBits();
 	return *this;
 }
 

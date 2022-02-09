@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: tkim <tkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 23:51:38 by tkim              #+#    #+#             */
-/*   Updated: 2022/02/07 23:51:39 by tkim             ###   ########.fr       */
+/*   Updated: 2022/02/09 19:23:02 by tkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ class Fixed
 		~Fixed();
 		Fixed(const Fixed& fixed);
 		Fixed& operator=(const Fixed &fixed);
-		int getRawBits(void);
+		int getRawBits(void) const;
 		void setRawBits(int const raw);
 };
 #endif

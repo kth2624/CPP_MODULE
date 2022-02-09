@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+         #
+#    By: tkim <tkim@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/07 23:51:53 by tkim              #+#    #+#              #
-#    Updated: 2022/02/07 23:51:54 by tkim             ###   ########.fr        #
+#    Updated: 2022/02/09 19:14:01 by tkim             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = fixed
 
-CXX = clang++
+CXX = c++
 
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+        */
+/*   By: tkim <tkim@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/07 23:51:46 by tkim              #+#    #+#             */
-/*   Updated: 2022/02/09 01:59:15 by tkim             ###   ########.fr       */
+/*   Updated: 2022/02/09 19:30:32 by tkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ Fixed::Fixed(int value):point_value(value)
 	std::cout << "Int constructor called" << std::endl;
 }
 
-Fixed::Fixed(float value):point_value((value * ( 1 << Fixed::fractional_bits)))
+Fixed::Fixed(float value):point_value(roundf((value * ( 1 << Fixed::fractional_bits))))
 {
 
 	std::cout << "Float constructor called" << std::endl;
