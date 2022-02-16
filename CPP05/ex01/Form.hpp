@@ -6,7 +6,7 @@
 /*   By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 16:32:48 by tkim              #+#    #+#             */
-/*   Updated: 2022/02/16 00:02:45 by tkim             ###   ########.fr       */
+/*   Updated: 2022/02/17 02:28:43 by tkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ class Form
 
 	public:
 		Form();
-		~Form();
+		virtual ~Form();
 		Form(Form const &Form);
 		Form& operator=(Form const &);
 		Form(std::string const name, const int gradeSign, const int gradeExecute);
