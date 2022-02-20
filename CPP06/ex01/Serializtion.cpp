@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Serializtion.cpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/18 19:35:49 by tkim              #+#    #+#             */
-/*   Updated: 2022/02/19 15:14:03 by tkim             ###   ########.fr       */
+/*   Created: 2022/02/19 15:42:19 by tkim              #+#    #+#             */
+/*   Updated: 2022/02/19 15:54:58 by tkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Convert.hpp"
+#include "Serializtion.hpp"
 
-int main(int argc, char* argv[])
+uintptr_t serialize(Data* ptr)
 {
-	if(argc != 2)
-	{
-		std::cout << "arg Error! \n";
-		return 0;
-	}
-	std::cout << std::fixed;
-	std::cout.precision(1);
-	
-	strToChar(argv[1]);
-	strToInt(argv[1]);
-	strToFloat(argv[1]);
-	strToDouble(argv[1]);
-	return 0;
+	return reinterpret_cast<uintptr_t>(ptr);
+}
+
+Data* deserialize(uintptr_t raw)
+{
+	return reinterpret_cast<struct Data *>(raw);
 }

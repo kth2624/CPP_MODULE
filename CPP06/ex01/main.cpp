@@ -5,26 +5,28 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/18 19:35:49 by tkim              #+#    #+#             */
-/*   Updated: 2022/02/19 15:14:03 by tkim             ###   ########.fr       */
+/*   Created: 2022/02/19 15:50:57 by tkim              #+#    #+#             */
+/*   Updated: 2022/02/19 15:52:13 by tkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Convert.hpp"
+#include "Serializtion.hpp"
 
-int main(int argc, char* argv[])
+int main(void)
 {
-	if(argc != 2)
-	{
-		std::cout << "arg Error! \n";
-		return 0;
-	}
-	std::cout << std::fixed;
-	std::cout.precision(1);
-	
-	strToChar(argv[1]);
-	strToInt(argv[1]);
-	strToFloat(argv[1]);
-	strToDouble(argv[1]);
+	struct Data D;
+	D.value = 42;
+
+	uintptr_t	raw;
+	struct Data	*ptr;
+
+	std::cout << "Data struct value : " << D.value << std::endl;
+	std::cout << "Data struct ptr   : " << &D << std::endl;
+	raw = serialize(&D);
+	std::cout << "serialize         : " << raw << std::endl;
+	ptr = deserialize(raw);
+	std::cout << "deserialize value : " << ptr->value << std::endl;
+	std::cout << "deserialize ptr   : " << ptr << std::endl;
+
 	return 0;
 }
