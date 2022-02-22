@@ -6,7 +6,7 @@
 /*   By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 01:56:41 by tkim              #+#    #+#             */
-/*   Updated: 2022/02/21 22:53:12 by tkim             ###   ########.fr       */
+/*   Updated: 2022/02/22 14:00:50 by tkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,13 +47,16 @@ void Span::addNumber(int N)
 		throw Span::OutOfBoundException();
 	v.push_back(N);
 }
-void Span::addNumbers(int *arr, int n)
+
+void Span::addNumbers(std::vector<int>::iterator iter1,std::vector<int>::iterator iter2)
 {
 	if(v.size() > this->N)
 		throw Span::OutOfBoundException();
 	std::vector<int>::iterator iter;
-	iter = v.begin();
-	v.insert(iter, arr, arr + n);
+	for(iter = iter1; iter != iter2; iter++)
+	{
+		v.push_back(*iter);
+	}
 }
 
 unsigned int Span::shortestSpan()

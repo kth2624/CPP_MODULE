@@ -6,7 +6,7 @@
 /*   By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 20:33:10 by tkim              #+#    #+#             */
-/*   Updated: 2022/02/21 22:52:40 by tkim             ###   ########.fr       */
+/*   Updated: 2022/02/22 14:01:27 by tkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,14 +66,14 @@ int main()
 	{
 		std::cout << "-----------span num :  10000 case -------------" << std::endl;
 		Span man = Span(10000);
-		int arr[10000];
+		std::vector<int> arr;
 		for(int i = 0; i < 10000; i++)
 		{
-			arr[i] = i;
+			arr.push_back(i);
 		}
 		try
 		{
-			man.addNumbers(arr, 10000);
+			man.addNumbers(arr.begin(), arr.end());
 			//man.printElement();
 			std::cout << man.shortestSpan() << std::endl;
 			std::cout << man.longestSpan() << std::endl;
@@ -84,6 +84,34 @@ int main()
 			std::cerr << e.what() << '\n';
 		}
 		std::cout << std::endl;
+	}
+
+
+	{
+		std::cout << "-----------addNumber(range , range ) -------------" << std::endl;
+
+		std::vector<int> v;
+    	for (int i = 0; i < 10; i++)
+        	v.push_back(i);
+
+		Span span(15);
+		try
+		{
+			span.addNumbers(v.begin(), v.end());
+		}
+		catch (std::exception &e)
+		{
+			std::cout << e.what();
+		}
+		try
+		{
+			std::cout << span.shortestSpan() << std::endl;
+			std::cout << span.longestSpan() << std::endl;
+		}
+		catch (std::exception &e)
+		{
+			std::cout << e.what();
+		}
 	}
 	return 0;
 }

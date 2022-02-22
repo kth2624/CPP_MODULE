@@ -6,7 +6,7 @@
 /*   By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 01:56:41 by tkim              #+#    #+#             */
-/*   Updated: 2022/02/21 21:52:49 by tkim             ###   ########.fr       */
+/*   Updated: 2022/02/22 13:58:05 by tkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ class Span
 		~Span();
 		Span& operator=(const Span& obj);
 		void addNumber(int N);
-		void addNumbers(int *arr, int n);
+		void addNumbers(std::vector<int>::iterator iter1,std::vector<int>::iterator iter2);
 		unsigned int shortestSpan();
 		unsigned int longestSpan();
 		unsigned int getN()const;
