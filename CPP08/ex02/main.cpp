@@ -6,7 +6,7 @@
 /*   By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 20:33:10 by tkim              #+#    #+#             */
-/*   Updated: 2022/02/21 22:45:33 by tkim             ###   ########.fr       */
+/*   Updated: 2022/02/22 14:14:05 by tkim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,7 +69,20 @@ int main()
 		std::cout << *it << std::endl;
 		++it;
 	}
+
+	{
+	std::cout << "------- reverse_iterator Ex -----" << std::endl;
+
 	std::stack<int> s(mstack);
+	MutantStack<int>::reverse_iterator it = mstack.rbegin();
+	MutantStack<int>::reverse_iterator ite = mstack.rend();
+	while (it != ite)
+	{
+		std::cout << *it << std::endl;
+		++it;
+	}
+	}
+
 	
 	std::cout << "------- list Ex -----" << std::endl;
 	listEx();
