@@ -6,7 +6,7 @@
 #    By: tkim <tkim@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/08 01:19:33 by tkim              #+#    #+#              #
-#    Updated: 2022/10/10 16:57:11 by tkim             ###   ########.fr        #
+#    Updated: 2022/10/10 19:36:12 by tkim             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,7 @@ CXX = c++
 
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 
-SRC = test.cpp Account.cpp
+SRC = tests.cpp Account.cpp
 
 OBJ = $(SRC:.cpp=.o)
 
