@@ -5,18 +5,18 @@
 #                                                     +:+ +:+         +:+      #
 #    By: tkim <tkim@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/02/08 01:19:23 by tkim              #+#    #+#              #
-#    Updated: 2022/10/10 16:45:34 by tkim             ###   ########.fr        #
+#    Created: 2022/02/08 01:19:33 by tkim              #+#    #+#              #
+#    Updated: 2022/10/10 16:57:11 by tkim             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = megaphone
+NAME = account
 
 CXX = c++
 
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 
-SRC = megaphone.cpp
+SRC = test.cpp Account.cpp
 
 OBJ = $(SRC:.cpp=.o)
 

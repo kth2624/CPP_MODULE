@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: tkim <tkim@student.42seoul.kr>             +#+  +:+       +#+         #
+#    By: tkim <tkim@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/08 01:19:33 by tkim              #+#    #+#              #
-#    Updated: 2022/02/08 01:19:57 by tkim             ###   ########.fr        #
+#    Updated: 2022/10/10 16:45:46 by tkim             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = phonebook
 
-CXX = clang++
+CXX = c++
 
 CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 
